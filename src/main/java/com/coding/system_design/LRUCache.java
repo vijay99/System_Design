@@ -3,7 +3,7 @@ package com.coding.system_design;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class LRUImplementation {
+public class LRUCache {
     //HashMap to store cache data
     HashMap<Integer,String> data = new HashMap<>();
     //LinkedList to store order of the cache access
@@ -11,7 +11,7 @@ public class LRUImplementation {
     //size of the cache
     int capacity;
 
-    LRUImplementation(int capacity){
+    LRUCache(int capacity){
         this.capacity=capacity;
     }
 
@@ -59,7 +59,7 @@ public class LRUImplementation {
 
     //driver code
     public static void main(String[] args) {
-        LRUImplementation LRUObj= new LRUImplementation(3);
+        LRUCache LRUObj= new LRUCache(3);
         LRUObj.put(1,"A");
         LRUObj.put(2,"B");
         LRUObj.put(3,"C");
